@@ -1,6 +1,7 @@
 package com.employee.employee.application.dto.useCases;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.employee.employee.application.dto.requests.CreateEmployeeRequest;
 import com.employee.employee.application.dto.responses.GenericResponse;
@@ -12,8 +13,6 @@ import com.employee.employee.domain.FirstName;
 import com.employee.employee.domain.LastName;
 import com.employee.employee.domain.Phone;
 import com.employee.shared.infrastructure.EventPublisher;
-
-import jakarta.transaction.Transactional;
 
 @Service
 @Transactional

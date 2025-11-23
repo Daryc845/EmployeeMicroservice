@@ -1,32 +1,28 @@
 package com.employee.employee.infraestructure;
 
 import com.employee.employee.domain.Employee;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
-@Entity
-@Table(name = "Employee")
+@Document(collection = "employees")
 public class EmployeeEntity {
-    @Id
-    @Column(name = "document", nullable = false, length = 50)
+    @Id 
     private String document;
 
-    @Column(name = "firstname", nullable = false, length = 100)
+    @Field("firstname")
     private String firstname;
 
-    @Column(name = "lastname", nullable = false, length = 100)
+    @Field("lastname")
     private String lastname;
 
-    @Column(name = "email", nullable = false, length = 150)
+    @Field("email")
     private String email;
 
-    @Column(name = "phone", nullable = false, length = 20)
+    @Field("phone")
     private String phone;
 
-    @Column(name = "status", nullable = false)
+    @Field("status")
     private Boolean status;
 
     public EmployeeEntity() {

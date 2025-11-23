@@ -1,5 +1,6 @@
 package com.employee.employee.infraestructure;
-import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface EmployeeJpaRepository extends JpaRepository<EmployeeEntity, String>{
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface EmployeeJpaRepository extends MongoRepository<EmployeeEntity, String> {
 }
