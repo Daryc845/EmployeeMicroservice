@@ -32,11 +32,7 @@ public class AccessRequestConsumer {
             String employeeId = event.get("employeeId").toString();
             String accessdatetime = event.get("accessdatetime").toString();
             String requestType = event.get("requestType").toString();
-            
-            System.out.println("Procesando petición: " + requestId + " para empleado: " + employeeId);
-            
             boolean isValid = validateEmployeeUseCase.validateEmployee(employeeId);
-            System.out.println("Empleado " + employeeId + " válido: " + isValid);
             
             if (isValid) {
                 employeeEventProducer.sendEmployeeValidatedEvent(
