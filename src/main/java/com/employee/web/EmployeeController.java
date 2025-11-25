@@ -20,7 +20,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
 @RestController
 @RequestMapping("/employee")
-@CrossOrigin(origins = "http://localhost:4200")
 public class EmployeeController {
 
     private final CreateEmployeeUseCase createEmployeeUseCase;
