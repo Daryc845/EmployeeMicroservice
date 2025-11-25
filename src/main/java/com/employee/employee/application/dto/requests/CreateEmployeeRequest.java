@@ -6,6 +6,7 @@ public class CreateEmployeeRequest {
     private String lastName;
     private String email;
     private String phone;
+    private String status;
 
     public String getDocument() { return document; }
     public void setDocument(String document) { this.document = document; }
@@ -21,4 +22,7 @@ public class CreateEmployeeRequest {
 
     public String getPhone() { return phone; }
     public void setPhone(String phone) { this.phone = phone; }
+
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 }

@@ -21,6 +21,10 @@ public class Status extends ValueObject{
         return new Status(value);
     }
 
+    public static boolean valueOf(String value){
+        return value.equals("true");
+    }
+
     public boolean getValue(){
         return this.value;
     }
@@ -36,5 +40,10 @@ public class Status extends ValueObject{
     @Override
     public int hashCode() {
         return Objects.hash(value);
+    }
+
+    @Override
+    public String toString(){
+        return this.value? "Activo": "Inactivo";
     }
 }

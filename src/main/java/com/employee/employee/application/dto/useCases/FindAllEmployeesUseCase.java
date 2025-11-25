@@ -23,13 +23,13 @@ public class FindAllEmployeesUseCase {
         List<Employee> employees = repository.findAll();
 
         List<EmployeeListItemResponse> data = employees.stream()
-                .filter(e -> e.getStatus().getValue())
                 .map(e -> new EmployeeListItemResponse(
                         e.getDocument().getValue(),
                         e.getFirstName().getValue(),
                         e.getLastName().getValue(),
                         e.getEmail().getValue(),
-                        e.getPhone().getValue()
+                        e.getPhone().getValue(),
+                        e.getStatus().toString()
                 ))
                 .collect(Collectors.toList());
 

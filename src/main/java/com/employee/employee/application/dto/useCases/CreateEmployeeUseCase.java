@@ -12,6 +12,7 @@ import com.employee.employee.domain.EmployeeRepository;
 import com.employee.employee.domain.FirstName;
 import com.employee.employee.domain.LastName;
 import com.employee.employee.domain.Phone;
+import com.employee.employee.domain.Status;
 import com.employee.shared.infrastructure.EventPublisher;
 
 @Service
@@ -32,7 +33,7 @@ public class CreateEmployeeUseCase {
             return initialResponse;
         }
 
-        Employee employee = Employee.create(request.getDocument(), request.getFirstName(), request.getLastName(), request.getEmail(), request.getPhone(), true);
+        Employee employee = Employee.create(request.getDocument(), request.getFirstName(), request.getLastName(), request.getEmail(), request.getPhone(), Status.valueOf(request.getStatus()));
 
         
 
