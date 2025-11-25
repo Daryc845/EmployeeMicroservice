@@ -1,11 +1,26 @@
 package com.employee.employee.application.dto.requests;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
+@Schema(description = "Datos necesarios para crear un nuevo empleado")
 public class CreateEmployeeRequest {
+
+    @Schema(description = "Número de documento del empleado", example = "1029384756")
     private String document;
+
+    @Schema(description = "Primer nombre del empleado", example = "Juan")
     private String firstName;
+
+    @Schema(description = "Apellido del empleado", example = "Pérez")
     private String lastName;
+
+    @Schema(description = "Correo electrónico del empleado", example = "juan.perez@uptc.edu.co")
     private String email;
+
+    @Schema(description = "Número telefónico del empleado", example = "+57 3201234567")
     private String phone;
+
+    @Schema(description = "Estado del empleado", example = "ACTIVE")
     private String status;
 
     public String getDocument() { return document; }
