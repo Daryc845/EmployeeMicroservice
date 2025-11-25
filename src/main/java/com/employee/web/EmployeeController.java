@@ -21,7 +21,6 @@ import com.employee.employee.application.dto.useCases.UpdateEmployeeUseCase;
 
 @RestController
 @RequestMapping("/employee")
-@CrossOrigin(origins = "http://localhost:4200")
 public class EmployeeController {
     private final CreateEmployeeUseCase createEmployeeUseCase;
     private final UpdateEmployeeUseCase updateEmployeeUseCase;
