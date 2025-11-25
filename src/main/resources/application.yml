@@ -19,7 +19,7 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 server:
-  port: 8080
+  port: 9091
 
 logging:
   level:
